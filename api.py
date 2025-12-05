@@ -8,11 +8,11 @@ app = Flask(__name__)
 
 # 从环境变量获取数据库配置，增强安全性
 db_config = {
-    "host": os.environ.get("DB_HOST", "mysql2.sqlpub.com"),
-    "port": int(os.environ.get("DB_PORT", 3307)),
-    "user": os.environ.get("DB_USER", "gasroot"),
-    "password": os.environ.get("DB_PASSWORD", "zzKVt7qSA0q8fA3c"),
-    "database": os.environ.get("DB_NAME", "gas_db")
+    "host": os.environ.get("DB_HOST"),
+    "port": int(os.environ.get("DB_PORT")),
+    "user": os.environ.get("DB_USER"),
+    "password": os.environ.get("DB_PASSWORD"),
+    "database": os.environ.get("DB_NAME")
 }
 
 @app.route("/")
